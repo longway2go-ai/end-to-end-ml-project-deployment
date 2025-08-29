@@ -1,0 +1,1 @@
+Data Ingestion - Here once we give the data, with the help of dataingestionconfig class it knows where to save all these paths.
