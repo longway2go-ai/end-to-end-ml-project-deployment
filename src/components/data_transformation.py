@@ -38,8 +38,8 @@ class DataTransformation:
             cat_pipeline=Pipeline(
                 steps=[
                     ("imputer",SimpleImputer(strategy="most_frequent")),
-                    ("one_hot_encoder",OneHotEncoder()),
-                    ("scaler",StandardScaler())
+                    ("one_hot_encoder",OneHotEncoder(handle_unknown="ignore")),
+                    ("scaler",StandardScaler(with_mean=False))
                 ]
             )
 
@@ -104,5 +104,5 @@ class DataTransformation:
                 self.data_transformation_config.preprocessor_obj_file_path,
             )
 
-        except:
-            pass
+        except Exception as e:
+            raise CustomException(e, sys)

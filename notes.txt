@@ -1,1 +1,8 @@
-Data Ingestion - Here once we give the data, with the help of dataingestionconfig class it knows where to save all these paths.
+# Data Ingestion - Here once we give the data, with the help of dataingestionconfig class it knows where to save all these paths.
+
+# So, the @dataclass decorator is not mandatory, but it saves you from boilerplate code when your class is primarily used to store data.
+You have to manually define __init__, __repr__, and sometimes __eq__.
+With @dataclass, Python auto-generates those for you: so we can simply go ahead with defining the variables with no initialisation.
+
+# Data Transformation - it will do the necessary transformations where if cat to num or feature scaling, feature encoding whatever.
+# utils  contains all the general defined function that will be used in any of the files. 
